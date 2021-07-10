@@ -1,0 +1,25 @@
+.votes {
+    width: 500px;
+}
+
+.bar-container {
+    width: 400px;
+}
+
+.flavor-1-bar {
+    background-color: rgb(168, 241, 242);
+    height: 25px;
+    max-width: 400px;
+}
+
+.flavor-2-bar {
+    background-color: rgb(255, 255, 138);
+    height: 25px;
+    max-width: 400px;
+}
+
+.flavor-3-bar {
+    background-color: rgb(237, 104, 149);
+    height: 25px;
+    max-width: 400px;
+}
