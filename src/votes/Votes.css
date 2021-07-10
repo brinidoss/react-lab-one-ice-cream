@@ -4,6 +4,13 @@
 
 .bar-container {
     width: 400px;
+    margin-bottom: 20px;
+}
+
+.bar {
+    height: 25px;
+    max-width: 400px;
+    border-radius: 5px;
 }
 
 .flavor-1-bar {
@@ -23,3 +30,8 @@
     height: 25px;
     max-width: 400px;
 }
+
+h2 {
+    margin-bottom: 20px;
+}
+

@@ -1,8 +1,16 @@
 header.Header {
     text-align: center;
-    color: royalblue;
-    font-family: cursive;
+    color: darkgray;
     box-shadow: 0px 7px 9px 1px rgba(117,117,117,0.62);
+}
 
-    
+.heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 50px;
+}
+
+h1 {
+    color: #0e3c7e;
 }

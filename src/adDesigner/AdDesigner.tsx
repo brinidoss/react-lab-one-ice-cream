@@ -1,42 +1,34 @@
 import { useState } from 'react';
+import Ad from '../ad/Ad';
 import './AdDesigner.css';
 
 function AdDesigner() {
-    const [ad, setAd] = useState("Sea Salt");
-    const [theme, setTheme] = useState(false);
-    const [fontSize, setFontSize] = useState(20);
-   
-    let chosenTheme = "light";
-
-    if (theme === false) {
-        chosenTheme = "light"
-    } else {
-        chosenTheme = "dark";
-    };
-
+    const [flavor, setFlavor] = useState("Sea Salt");
+    const [darkTheme, setDarkTheme] = useState(false);
+    const [fontSize, setFontSize] = useState(40);
    
     return(
         <div className="AdDesigner">
-            <h3>Ad Designer</h3>
-            <div className={`ad-container ${chosenTheme}-${theme}`}>
-                <p>Vote for</p>
-                <h4 style= {{fontSize: `${fontSize}px`}}>{ad}</h4>
-            </div>
+            <h2>Ad Designer</h2>
+            <Ad flavor={flavor} fontSize={fontSize} darkTheme={darkTheme}/>
             <h5>What to Support</h5>
             <div className="flavor-container">
-                <button className="flavorButton" onClick={() => {setAd("Sea Salt")}} disabled={ad === "Sea Salt" ? true : false}>Sea Salt</button>
-                <button className="flavorButton" onClick={() => {setAd("Paopu Fruit")}} disabled={ad === "Paopu Fruit" ? true : false}>Paopu Fruit</button>
-                <button className="flavorButton" onClick={() => {setAd("Royalberry")}} disabled={ad === "Royalberry" ? true : false}>Royalberry</button>
+                <button className="flavorButton" onClick={() => {setFlavor("Sea Salt")}} disabled={flavor === "Sea Salt" ? true : false}>Sea Salt</button>
+                <button className="flavorButton" onClick={() => {setFlavor("Paopu Fruit")}} disabled={flavor === "Paopu Fruit" ? true : false}>Paopu Fruit</button>
+                <button className="flavorButton" onClick={() => {setFlavor("Royalberry")}} disabled={flavor === "Royalberry" ? true : false}>Royalberry</button>
             </div>
             <h5>Color Theme</h5>
             <div className="theme-container">
-                <button onClick={() => {setTheme(false)}} disabled={theme === false ? true : false}>Light</button>
-                <button onClick={() => {setTheme(true)}} disabled={theme === true ? true : false}>Dark</button>
+                <button onClick={() => {setDarkTheme(false)}} disabled={darkTheme === false ? true : false}>Light</button>
+                <button onClick={() => {setDarkTheme(true)}} disabled={darkTheme === true ? true : false}>Dark</button>
             </div>
             <h5>Font Size</h5>
             <div className="font-container">
                 <button onClick={() => {setFontSize(fontSize - 1)}}>Down</button>
-                <p>{fontSize}</p>
+                <div className="font-box">
+                  <p>{fontSize}</p>  
+                </div>
+                
                 <button onClick={() => {setFontSize(fontSize + 1)}}>Up</button>
             </div>
             

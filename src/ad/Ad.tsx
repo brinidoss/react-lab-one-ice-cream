@@ -6,8 +6,6 @@ interface Props {
     darkTheme: boolean;
 }
 
-
-
 function Ad({flavor, fontSize, darkTheme}: Props) {
 let addClass = "";
 
@@ -20,7 +18,7 @@ if (darkTheme === false) {
     return (
         <div className={`ad-container ${addClass}`}>
             <p>Vote For</p>
-            <h4 style= {{fontSize: `${fontSize}px`}}>{flavor}</h4>
+            <h4 className="flavor-text" style= {{fontSize: `${fontSize}px`}}>{flavor}</h4>
         </div>
     );
 }

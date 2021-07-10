@@ -5,12 +5,14 @@ interface Props {
 }
 
 function Header({user}: Props) {
+    
     return (
         <header className="Header">
-            <h1>Ice Cream Wars</h1>
-            <h4>Welcome {user}</h4>
+            <div className="heading">
+                <h1>Ice Cream Wars</h1>
+                <h4>Welcome {user}</h4>
+            </div>
         </header>
-        
     );
 }
 

@@ -11,3 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+h1 {
+  font-family: 'Caveat';
+  font-size: 50px;
+  margin: 20px 0px;
+  
+}
+
+h2 {
+  font-family: 'Caveat';
+  font-size: 40px;
+  margin-top: 0px;
+}
+
+.flavor-text {
+  font-family: 'Caveat';
+}
+
